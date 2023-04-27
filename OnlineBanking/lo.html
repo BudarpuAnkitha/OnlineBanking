@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Online Banking</title>
+  <link rel="stylesheet" href="lo.css">
+</head>
+<body background="https://bncfin.com/wp-content/uploads/2016/11/Retail_7.jpg">
+  <div class="container">
+    <div class="login-form">
+      <h1>Online Banking</h1>
+      <form>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="submit" id="login-button">Login</button>
+      </form>
+      <p id="login-error" class="error-message"></p>
+    </div>
+    <div class="banking-app hidden">
+      <h1>Online Banking</h1>
+      <div class="balance-container">
+        <h2>Account Balance</h2>
+        <p>$<span id="balance"></span></p>
+      </div>
+      <div class="transactions-container">
+        <h2>Recent Transactions</h2>
+        <table id="transactions">
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="transaction-form">
+        <h2>Make a Transaction</h2>
+        <form>
+          <input type="radio" id="deposit" name="transaction-type" value="deposit" checked>
+          <label for="deposit">Deposit</label>
+          <input type="radio" id="withdraw" name="transaction-type" value="withdraw">
+          <label for="withdraw">Withdraw</label>
+          <input type="number" id="amount" placeholder="Amount">
+          <button type="submit" id="transaction-button">Submit</button>
+        </form>
+        <p id="transaction-error" class="error-message"></p>
+      </div>
+      <button id="logout-button">Logout</button>
+    </div>
+  </div>
+ <!-- Login page  
+<div class="login-container">
+  <form class="login-form">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" id="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" required>
+    </div>
+    <p id="login-error"></p>
+    <button id="login-button">Login</button>
+  </form>
+ </div>  -->
+<div class="banking-app hidden">
+  <div class="balance-container">
+    <h2>Account Balance</h2>
+    <p id="balance"></p>
+  </div>
+  <div class="transactions-container">
+    <h2>Transaction History</h2>
+    <table id="transactions">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <div class="transaction-form">
+    <h2>Make a Transaction</h2>
+    <form>
+      <div class="form-group">
+        <label for="amount">Amount</label>
+        <input type="number" id="amount" required>
+      </div>
+      <div class="form-group">
+        <label for="transaction-type">Transaction Type</label>
+        <div id="transaction-type">
+          <input type="radio" id="deposit" name="transaction-type" value="deposit" checked>
+          <label for="deposit">Deposit</label>
+          <input type="radio" id="withdraw" name="transaction-type" value="withdraw">
+          <label for="withdraw">Withdraw</label>
+        </div>
+      </div>
+      <p id="transaction-error"></p>
+      <button id="transaction-button">Submit</button>
+      <button id="logout-button">Logout</button>
+    </form>
+  </div>
+</div> 
+  <script src="lo.js"></script>
+</body>
+</html>
